@@ -1,0 +1,121 @@
+/* ######################## MAIN ######################## */
+body {
+height: 100vh;
+margin: 0;
+}
+.main-window {
+    height: 100%;
+    display: flex;
+    min-height: 1000px;
+
+    /*      For Troubleshooting     */
+    /*background-color: yellow;
+    border: 5px solid rgb(255, 0, 221);*/
+}
+/* ######################## CHAT ######################## */
+.main-container {
+display: flex;
+flex-direction: column;
+width: 100%;
+height: 100%; 
+min-width: 1050px;
+
+background-color: #145736;
+border: 2px solid #161414;
+/*      For Troubleshooting     */
+/*border: 5px solid rgb(0, 225, 255);*/
+}            
+.main-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+.chat-container {
+    display: grid;  
+    grid-template-columns: 100%;
+    padding: 0px 10px;
+    height: 85%; 
+    gap: 12px;
+}
+    .message {
+        position: relative;
+        padding: 8px;
+        border-radius: 10px;
+        font-size: 14px;
+
+        background-color: white;
+        border: 1px solid black;
+    }
+    .incoming {
+        position: absolute;
+        left: 30px;
+
+        background-color: yellow;
+    }
+    .outgoing {
+        position: absolute;
+        right: 50px;
+
+        background-color: rgb(221, 12, 214);
+    }
+.message-draft {
+    flex: 1;
+    padding: 10px 10px;
+}
+.message-input {
+    height: 100px; /*TODO Fix height being hardcoded and not being dynamic*/
+
+    width: 100%;
+    border-radius: 10px;
+}
+/* ######################## SIDEBAR ######################## */
+.sidebar-container {
+height: 100%;
+min-width: 400px;
+display: flex;
+flex-direction: column;
+
+background-color: #0c2a1b;
+border: 2px solid transparent; /*Damit beide container gleich aussehen*/
+
+/*      For Troubleshooting     */
+/*border: 5px solid rgb(255, 119, 0);*/
+}
+.sidebar-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+
+    color: #e8e8e8;
+}
+.profiles-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    height: 85%;
+}
+.profile-row {
+    display: flex;
+    gap: 10px;
+    height: 25px;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 10px;
+
+    border: 1px solid #b5b5b5;
+}
+.profile-picture {
+    height: 25px;
+    border-radius: 25px;
+}
+.profile-name {
+    color: white;
+}
+.miscellaneous-container {
+    flex: 1;
+    text-align: center;
+    min-height: 0px;
+
+    background-color: #145736;
+    border: 1px solid #161414;
+}
